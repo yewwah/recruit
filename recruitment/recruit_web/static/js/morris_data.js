@@ -9,7 +9,7 @@ $(function() {
             itouch: 2647
         }, {
             period: '2010 Q2',
-            iphone: 2778,
+            iphone: 2790,
             ipad: 2294,
             itouch: 2441
         }, {
@@ -19,7 +19,7 @@ $(function() {
             itouch: 2501
         }, {
             period: '2010 Q4',
-            iphone: 3767,
+            iphone: 377,
             ipad: 3597,
             itouch: 5689
         }, {
@@ -54,7 +54,7 @@ $(function() {
             itouch: 1791
         }],
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
+        ykeys: ['zzz', 'ipad', 'itouch'],
         labels: ['iPhone', 'iPad', 'iPod Touch'],
         pointSize: 2,
         hideHover: 'auto',
