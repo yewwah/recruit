@@ -4,9 +4,8 @@ class ner:
 
     def _extract_entity_names(self,t):
         entity_names = []
-        
-        if hasattr(t, 'node') and t.node:
-            if t.node == 'NE':
+        if hasattr(t, 'label') and t.label:
+            if t.label() == 'NE':
                 entity_names.append(' '.join([child[0] for child in t]))
             else:
                 for child in t:
@@ -18,7 +17,7 @@ class ner:
         sentences = nltk.sent_tokenize(sample)
         tokenized_sentences = [nltk.word_tokenize(sentence) for sentence in sentences]
         tagged_sentences = [nltk.pos_tag(sentence) for sentence in tokenized_sentences]
-        chunked_sentences = nltk.batch_ne_chunk(tagged_sentences, binary=True)
+        chunked_sentences = nltk.ne_chunk_sents(tagged_sentences, binary=True)
         entity_names = []
         for tree in chunked_sentences:
             # Print results per sentence
@@ -26,4 +25,3 @@ class ner:
             
             entity_names.extend(self._extract_entity_names(tree))
         return entity_names
-        

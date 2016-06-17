@@ -6,7 +6,7 @@ from forms import PostForm
 # Create your views here.
 
 def base(request):
-	return render(request, 'web/base.html')
+    return render(request, 'web/base.html')
 def index(request):
     return render(request, 'web/index1.html', {})
 
@@ -35,11 +35,14 @@ def submit(request):
     # # if a GET (or any other method) we'll create a blank form
     # else:
     #     form = NameForm()
-    	text = str(text)
+        text = str(text)
         ner1 = ner()
         entities = ner1.initialize(text)
         for entity in entities:
-        	text = text.replace(str(entity), '<b><font color="green">' + str(entity) + "</font></b>")
+            print entity
+            text = text.replace(str(entity), '<b><font color="green">' + str(entity) + "</font></b>")
         text = str(text)
         print text
     return render(request, 'web/pages/submit1.html', {'text' : text})
+
+    
