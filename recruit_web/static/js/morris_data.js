@@ -3,39 +3,39 @@ $(function() {
     Morris.Area({
         element: 'morris-area-chart',
         data: [{
-            period: '2010 Q1',
-            tweets: 213
+            period: '2016-06-10',
+            retweets: 1000,
+            uniqueTweets:3000,
+            exposure:1253
         }, {
-            period: '2010 Q2',
-            tweets: 213
+            period: '2016-06-11',
+            retweets: 4600,
+            uniqueTweets:3800,
+            exposure:799
         }, {
-            period: '2010 Q3',
-            tweets: 213
+            period: '2016-06-12',
+            retweets: 1198200,
+            uniqueTweets:319400,
+            exposure:418885
         }, {
-            period: '2010 Q4',
-            tweets: 213
+            period: '2016-06-13',
+            retweets: 1061400,
+            uniqueTweets:26400,
+            exposure:856268
         }, {
-            period: '2011 Q1',
-            tweets: 213
+            period: '2016-06-14',
+            retweets: 424500,
+            uniqueTweets:119900,
+            exposure:290949
         }, {
-            period: '2011 Q2',
-            tweets: 213
-        }, {
-            period: '2011 Q3',
-            tweets: 213
-        }, {
-            period: '2011 Q4',
-            tweets: 213
-        }, {
-            period: '2012 Q1',
-            tweets: 213
-        }, {
-            period: '2012 Q2',
-            tweets: 121
+            period: '2016-06-15',
+            retweets: 201300,
+            uniqueTweets:66700,
+            exposure:203843
         }],
         xkey: 'period', //datetime 
-        ykeys : ['tweets'], //tweets
-        labels: ['Tweets'],
+        ykeys : ['retweets', 'uniqueTweets', 'exposure'], //tweets
+        labels: ['Retweets', 'Unique Tweets', 'Hastag Exposure(00s)' ],
         pointSize: 2,
         hideHover: 'auto',
         resize: true
