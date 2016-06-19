@@ -61,49 +61,43 @@ var brexit = [{
         uniqueTweets:66700,
         exposure:203843
         }];
-
-function addRowHandlers() {
-    var table = document.getElementById("tableId");
-    var rows = table.getElementsByTagName("tr");
-    for (i = 0; i < rows.length; i++) {
-        var currentRow = table.rows[i];
-        var createClickHandler = 
-            function(row) {
-                return function(){ 
-                    var cell = row.getElementsByTagName("td")[0];
-                    var id = cell.innerHTML;
-                    alert("id:" + id);
-
-                    if(id =="#orlando"){
-                        Morris.Area({
-                        element: 'morris-area-chart',
-                        data: orlando,
-                        xkey: 'period', //datetime 
-                        ykeys : ['retweets', 'uniqueTweets', 'exposure'], //tweets
-                        labels: ['Retweets', 'Unique Tweets', 'Hastag Exposure(00s)' ],
-                        pointSize: 2,
-                        hideHover: 'auto',
-                        resize: true
-                        });
-
-                    }
-                    else if (id == "##brexit"){
-                        Morris.Area({
-                        element: 'morris-area-chart',
-                        data: brexit,
-                        xkey: 'period', //datetime 
-                        ykeys : ['retweets', 'uniqueTweets', 'exposure'], //tweets
-                        labels: ['Retweets', 'Unique Tweets', 'Hastag Exposure(00s)' ],
-                        pointSize: 2,
-                        hideHover: 'auto',
-                        resize: true
-                        });
-
-                    }
-                };
-            };
-
-        currentRow.onclick = createClickHandler(currentRow);
+data = [];
+fashion = [];
+iphone = [];
+impulserewards = [];
+$('#tableId').find('tr').click( function(){
+  var test = ($(this).index());
+  $('#morris-area-chart').remove();
+  $('#append').append('<div id =  "morris-area-chart" />');
+  var chart = Morris.Area({
+        element: 'morris-area-chart',
+        data: data,
+        xkey: 'period', //datetime 
+        ykeys : ['retweets', 'uniqueTweets', 'exposure'], //tweets
+        labels: ['Retweets', 'Unique Tweets', 'Hastag Exposure(00s)' ],
+        pointSize: 2,
+        hideHover: 'auto',
+        resize: true
+        });  
+  if (test == '1') {
+        chart.setData(brexit);
     }
-}
-window.onload = addRowHandlers();
+    else if (test == '0'){
+        chart.setData(orlando);
+    }
+    else if (test == '2'){
+        chart.setData(fashion);
+
+    }
+    else if (test == '3'){
+        chart.setData(fashion);
+
+    }
+    else if (test == '4'){
+        chart.setData(iphone);
+
+    }
+    else if (test == '5'){
+    chart.setData(impulserewards);
+    };
+});
