@@ -1,5 +1,21 @@
 {% extends 'web/base.html' %}
-        
+<style>
+ .otherReasonTextBox1 {
+     display:none;
+ }
+</style>
+<script type="text/javascript">
+$(document).ready(function (e) {
+    $('#reasonDropDown').change(function () {
+        alert('haha123');
+        if ($(this).val() == 'other1') {
+            $('.otherReasonTextBox1').show();
+        } else {
+            $('.otherReasonTextBox1').hide();
+        }
+    });
+});
+</script>     
         {% block content %}
         <div id="page-wrapper">
             <div class="row">
@@ -64,8 +80,44 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-bar-chart-o fa-fw"></i> Trending Hastags Right
+                            <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Select Tweets</h4>
+                              </div>
+                              <div class="modal-body">
+                              <select id="reasonDropDown" name="Select">
+                                    <option value="other1" id="other1">Other1</option>
+                                    <option value="other2" id="other2">Other2</option>
+                                    <option value="other3" id="other3">Other3</option>
+                                    <option value="other4" id="other4">Other4</option>
+                                    <option value="other5" id="other5">Other5</option>
+                              </select>
+                                <div class="otherReasonTextBox1">Other Reason Textbox1</div>
+                                <div class="otherReasonTextBox2">Other Reason Textbox2</div>
+                                <div class="otherReasonTextBox3">Other Reason Textbox3</div>
+                                <div class="otherReasonTextBox4">Other Reason Textbox4</div>
+                                <div class="otherReasonTextBox5">Other Reason Textbox5</div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+
+                            </div>
+                            </div>
                             <div class="pull-right">
-                            
+                                <div class="btn-group">
+                                    <button type="button" data-toggle="modal" data-target = "#myModal">
+                                       View Tweets
+                                        <span class="caret"></span>
+                                    </button>
+                                    
+                                </div>
                             </div>
                         </div>
                         <!-- /.panel-heading -->
