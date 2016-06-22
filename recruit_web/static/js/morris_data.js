@@ -161,6 +161,7 @@ $('#tableId').find('tr').click( function(){
   var chart = Morris.Area({
         element: 'morris-area-chart',
         data: orlando,
+        xLabels: 'day',
         xkey: 'period', //datetime 
         ykeys : ['retweets', 'uniqueTweets', 'exposure'], //tweets
         labels: ['Retweets', 'Unique Tweets', 'Hastag Exposure(00s)' ],
