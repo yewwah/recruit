@@ -155,6 +155,7 @@ var impulserewards = [{
         exposure:331
         }];
 function click_brexit(){
+    document.getElementById('header').innerHTML = "Brexit";
     document.getElementById('box1_head1').innerHTML = "Brexit";
     document.getElementById('box1_head2').innerHTML = "@Brexit";
     document.getElementById('box1_cont').innerHTML = "Brexit";
@@ -177,6 +178,7 @@ function click_brexit(){
        
 }
 function click_fashion(){
+    document.getElementById('header').innerHTML = "fashion";
     document.getElementById('box1_head1').innerHTML = "fashion";
     document.getElementById('box1_head2').innerHTML = "@fashion";
     document.getElementById('box1_cont').innerHTML = "fashion";
@@ -200,6 +202,7 @@ function click_fashion(){
 }
 
 function click_iphone(){
+    document.getElementById('header').innerHTML = "iphone";
     document.getElementById('box1_head1').innerHTML = "iphone";
     document.getElementById('box1_head2').innerHTML = "@iphone";
     document.getElementById('box1_cont').innerHTML = "iphone";
@@ -223,6 +226,7 @@ function click_iphone(){
 }
 
 function click_implusrewards(){
+    document.getElementById('header').innerHTML = "impulserewards";
     document.getElementById('box1_head1').innerHTML = "rewards";
     document.getElementById('box1_head2').innerHTML = "@rewards";
     document.getElementById('box1_cont').innerHTML = "rewards";
