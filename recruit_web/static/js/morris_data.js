@@ -154,6 +154,97 @@ var impulserewards = [{
         uniqueTweets:62600,
         exposure:331
         }];
+function click_brexit(){
+    document.getElementById('box1_head1').innerHTML = "Brexit";
+    document.getElementById('box1_head2').innerHTML = "@Brexit";
+    document.getElementById('box1_cont').innerHTML = "Brexit";
+
+    document.getElementById('box2_head1').innerHTML = "Brexit";
+    document.getElementById('box2_head2').innerHTML = "@Brexit";
+    document.getElementById('box2_cont').innerHTML = "Brexit";
+    
+    document.getElementById('box3_head1').innerHTML = "Brexit";
+    document.getElementById('box3_head2').innerHTML = "@Brexit";
+    document.getElementById('box3_cont').innerHTML = "Brexit";
+    
+    document.getElementById('box4_head2').innerHTML = "@Brexit";
+    document.getElementById('box4_head1').innerHTML = "Brexit";
+    document.getElementById('box4_cont').innerHTML = "Brexit";
+    
+    document.getElementById('box5_head1').innerHTML = "Brexit";
+    document.getElementById('box5_head2').innerHTML = "@Brexit";
+    document.getElementById('box5_cont').innerHTML = "Brexit";
+       
+}
+function click_fashion(){
+    document.getElementById('box1_head1').innerHTML = "fashion";
+    document.getElementById('box1_head2').innerHTML = "@fashion";
+    document.getElementById('box1_cont').innerHTML = "fashion";
+
+    document.getElementById('box2_head1').innerHTML = "fashion";
+    document.getElementById('box2_head2').innerHTML = "@fashion";
+    document.getElementById('box2_cont').innerHTML = "fashion";
+    
+    document.getElementById('box3_head1').innerHTML = "fashion";
+    document.getElementById('box3_head2').innerHTML = "@fashion";
+    document.getElementById('box3_cont').innerHTML = "fashion";
+    
+    document.getElementById('box4_head2').innerHTML = "@fashion";
+    document.getElementById('box4_head1').innerHTML = "fashion";
+    document.getElementById('box4_cont').innerHTML = "fashion";
+    
+    document.getElementById('box5_head1').innerHTML = "fashion";
+    document.getElementById('box5_head2').innerHTML = "@fashion";
+    document.getElementById('box5_cont').innerHTML = "fashion";
+    
+}
+
+function click_iphone(){
+    document.getElementById('box1_head1').innerHTML = "iphone";
+    document.getElementById('box1_head2').innerHTML = "@iphone";
+    document.getElementById('box1_cont').innerHTML = "iphone";
+
+    document.getElementById('box2_head1').innerHTML = "iphone";
+    document.getElementById('box2_head2').innerHTML = "@iphone";
+    document.getElementById('box2_cont').innerHTML = "iphone";
+    
+    document.getElementById('box3_head1').innerHTML = "iphone";
+    document.getElementById('box3_head2').innerHTML = "@iphone";
+    document.getElementById('box3_cont').innerHTML = "iphone";
+    
+    document.getElementById('box4_head2').innerHTML = "@iphone";
+    document.getElementById('box4_head1').innerHTML = "iphone";
+    document.getElementById('box4_cont').innerHTML = "iphone";
+    
+    document.getElementById('box5_head1').innerHTML = "iphone";
+    document.getElementById('box5_head2').innerHTML = "@iphone";
+    document.getElementById('box5_cont').innerHTML = "iphone";
+    
+}
+
+function click_implusrewards(){
+    document.getElementById('box1_head1').innerHTML = "rewards";
+    document.getElementById('box1_head2').innerHTML = "@rewards";
+    document.getElementById('box1_cont').innerHTML = "rewards";
+
+    document.getElementById('box2_head1').innerHTML = "rewards";
+    document.getElementById('box2_head2').innerHTML = "@rewards";
+    document.getElementById('box2_cont').innerHTML = "rewards";
+    
+    document.getElementById('box3_head1').innerHTML = "rewards";
+    document.getElementById('box3_head2').innerHTML = "@rewards";
+    document.getElementById('box3_cont').innerHTML = "rewards";
+    
+    document.getElementById('box4_head2').innerHTML = "@rewards";
+    document.getElementById('box4_head1').innerHTML = "rewards";
+    document.getElementById('box4_cont').innerHTML = "rewards";
+    
+    document.getElementById('box5_head1').innerHTML = "rewards";
+    document.getElementById('box5_head2').innerHTML = "@rewards";
+    document.getElementById('box5_cont').innerHTML = "rewards";
+    
+}
+
 $('#tableId').find('tr').click( function(){
   var test = ($(this).index());
   $('#morris-area-chart').remove();
@@ -186,6 +277,7 @@ $('#tableId').find('tr').click( function(){
     }
     else if (test == '1'){
         chart.setData(brexit);
+        click_brexit();
         document.getElementById("row1col1").innerHTML = "RT @Ironwand: If you're happy with those who made this happen, vote to to <font color = 'red'>#REMAIN</font> in the <font color = 'red'>EU</font>. If you are not " ; 
         document.getElementById("row1col2").innerHTML = "#REMAIN, EU" ;
         document.getElementById("row2col1").innerHTML = "I fear that #Brexit could be the beginning of the destruction of not only the <font color = 'red'>EU</font>, but also of <font color = 'red'>Western</font> political civilisation: @eucopresident" ; 
@@ -200,6 +292,7 @@ $('#tableId').find('tr').click( function(){
     }
     else if (test == '2'){
         chart.setData(fashion);
+        click_fashion();
         document.getElementById("row1col1").innerHTML = "RT @jewellery_bank: <font color = 'red'>Beautiful</font> & distinctive Pendants 300 Designs" ; 
         document.getElementById("row1col2").innerHTML = "Beautiful" ;
         document.getElementById("row2col1").innerHTML = "Hailee Steinfeld Shows Off Her Chic Airport Style in Toronto http://dlvr.it/LcNlFL" ; 
@@ -215,6 +308,7 @@ $('#tableId').find('tr').click( function(){
     }
     else if (test == '3'){
         chart.setData(iphone);
+        click_iphone();
         document.getElementById("row1col1").innerHTML = "I have <font color = 'red'>Cauldron</font> on my island! Now my island is even more awesome! http://gigam.es/imtw_Tribez" ; 
         document.getElementById("row1col2").innerHTML = "Cauldron" ;
         document.getElementById("row2col1").innerHTML = "<font color = 'red'>Japan</font> Collections 28. 高校生のためのOCW - <font color = 'red'>Kyoto</font> University http://tinyurl.com/m9vscuu" ; 
@@ -229,6 +323,7 @@ $('#tableId').find('tr').click( function(){
     }
     else if (test == '4'){
         chart.setData(impulserewards);
+        click_implusrewards
         document.getElementById("row1col1").innerHTML = "I'm earning #mPLUSRewards in The Weather Channel. http://getm.pt/g6u5ec" ; 
         document.getElementById("row1col2").innerHTML = "" ;
         document.getElementById("row2col1").innerHTML = "I'm earning #mPLUSRewards in Ask Da Ball Android. http://getm.pt/plqw8x" ; 
