@@ -14,36 +14,44 @@ link = soup.find_all("a", {"title" : re.compile('^Next.*')}, href = True) #{"tit
 # 	print a['href']
 #exit(0)
 tbl = soup.find_all("a", {"class":"bigusername"})
-# print tbl
-# for name in tbl:
-# 	for username in name.children:
-# 		print username
-# exit(0)
-
+overall_lst = []
 letters = soup.find_all("div", attrs={"id":re.compile("post_message_\d+")})
+prev_username = ''
+#for username in tbl:
+#letters = [letters[3]]
 for letter in letters:
 	print '---new post---'
+	msg = ''
+	qmsg_lst = []
+	q_user = ''
+	q_msg = ''
 	for each in letter:
+		#import pdb;pdb.set_trace()
 		if isinstance(each, bs4.element.NavigableString):
-			if not repr(each) == u'\n':
-				print 'post', each
-			continue
-		for child in each.children:
-			if isinstance(child, bs4.element.NavigableString):
-				continue
-				#print repr(child)
-			if isinstance(child, bs4.element.Tag):
-				try:
-					for each_child in child:
-						if isinstance(each_child, bs4.element.NavigableString):
-							print 'each_child', repr(each_child)
-						if isinstance(each_child, bs4.element.Tag):
-							for children_child in each_child:
-								if isinstance(children_child, bs4.element.NavigableString):
-									print 'children_child', children_child
-				except:
-					pass
-				#print 'except', child
-		#print type(child)
-		# if '<' not in yes:
-		# 	print yes
+			if not repr(each) == u'\n' and each.strip():
+				msg += each 
+				
+		elif isinstance(each, bs4.element.Tag):
+			for child in each.children:
+				if isinstance(child, bs4.element.NavigableString):
+					continue				
+				if isinstance(child, bs4.element.Tag):
+					try:
+						for each_child in child:
+							print each_child
+							if isinstance(each_child, bs4.element.NavigableString):
+								q_msg = each_child
+								if q_user:
+									qmsg_lst.append((q_user, q_msg))
+							if isinstance(each_child, bs4.element.Tag):
+								for children_child in each_child:
+									if isinstance(children_child, bs4.element.NavigableString):
+										q_user = children_child
+					except:
+						pass
+			
+	overall_lst.append({msg : qmsg_lst})
+#	prev_username = username
+for i in overall_lst:
+	print i
+	print 'new line'
