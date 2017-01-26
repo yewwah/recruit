@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from ner import ner
-from django.core.context_processors import csrf
+from django.template.context_processors import csrf
 from forms import PostForm
 
 # Create your views here.
