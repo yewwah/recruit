@@ -170,14 +170,19 @@ function set_default(){
     click_orlando();
     document.getElementById("row1col1").innerHTML = "This Gov't is KILLING us! FBI had Undercover Informant on Islamic<font color = 'red'>#Orlando</font> Shooter Years Before Attack #RadicalIslam" ; 
     document.getElementById("row1col2").innerHTML = "Orlando (LOC)" ;
+    document.getElementById("row1col3").innerHTML = "Negative" ;
     document.getElementById("row2col1").innerHTML = "Gun control defeated in Senate. Again. <font color = 'red'>#Orlando</font> means nothing if you're paid by the <font color = 'blue'>NRA</font>." ; 
     document.getElementById("row2col2").innerHTML = "#Orlando(LOC), NRA (ORG)" ; 
-    document.getElementById("row3col1").innerHTML = "RETWEET if you agree <font color = 'orange'>Obama</font> admin should release the full, unredacted transcript of the #Orlando shooter's 911 call" ; 
+    document.getElementById("row2col3").innerHTML = "Negative" ;
+    document.getElementById("row3col1").innerHTML = "RETWEET if you agree <font color = 'green'>Obama</font> admin should release the full, unredacted transcript of the #Orlando shooter's 911 call" ; 
     document.getElementById("row3col2").innerHTML = "Obama (PER)" ; 
-    document.getElementById("row4col1").innerHTML = "Guess who supported <font color = 'orange'>Hillary Clinton</font>? " ; 
+    document.getElementById("row3col3").innerHTML = "Negative" ;
+    document.getElementById("row4col1").innerHTML = "Guess who supported <font color = 'green'>Hillary Clinton</font>? " ; 
     document.getElementById("row4col2").innerHTML = "Hillary (PER), Clinton (PER)" ; 
-    document.getElementById("row5col1").innerHTML = "At vigil outside <font color = 'blue'>NRA</font> HQ protesters hold hearts with names of #Orlando <font color = 'red'>victims</font>." ; 
+    document.getElementById("row4col3").innerHTML = "Neutral" ;
+    document.getElementById("row5col1").innerHTML = "At vigil outside <font color = 'blue'>NRA</font> HQ proselectioners hold hearts with names of #Orlando <font color = 'red'>victims</font>." ; 
     document.getElementById("row5col2").innerHTML = "NRA (ORG) " ; 
+    document.getElementById("row5col3").innerHTML = "Negative" ;
 }
 function click_orlando(){
 
@@ -200,7 +205,7 @@ function click_orlando(){
     
     document.getElementById('box5_head1').innerHTML = "Orlando Police";
     document.getElementById('box5_head2').innerHTML = "@OrlandoPolice";
-    document.getElementById('box5_cont').innerHTML = "Shooting at Pulse Nightclub on S Orange. Multiple injuries. Stay away from area.";
+    document.getElementById('box5_cont').innerHTML = "Shooting at Pulse Nightclub on S green. Multiple injuries. Stay away from area.";
        
 }
 function click_brexit(){
@@ -215,7 +220,7 @@ function click_brexit(){
     
     document.getElementById('box3_head1').innerHTML = "Brexit";
     document.getElementById('box3_head2').innerHTML = "@Brexit";
-    document.getElementById('box3_cont').innerHTML = "RT @theordinaryman2: need to listen to @DanHannanMEP he's the smartest #Tory I know #EURef #VoteLeave #Brexit #remain #INorOUT #Labour";
+    document.getElementById('box3_cont').innerHTML = "RT @theordinaryman2: need to listen to @DanHannanMEP he's the smarselection #Tory I know #EURef #VoteLeave #Brexit #remain #INorOUT #Labour";
     
     document.getElementById('box4_head1').innerHTML = "@Brexit";
     document.getElementById('box4_head2').innerHTML = "Brexit";
@@ -296,85 +301,96 @@ function click_implusrewards(){
 }
 
 $('#tableId').find('tr').click( function(){
-  var test = ($(this).index());
+  var selection = ($(this).index());
   $('#morris-area-chart').remove();
   $('#append').append('<div id =  "morris-area-chart" />');
   
 
 
-  if (test == '0') {
+  if (selection == '0') {
         chart.setData(orlando);
         click_orlando();
-        document.getElementById("row1col1").innerHTML = "This Gov't is KILLING us! FBI had Undercover Informant on Islamic<font color = 'red'>#Orlando</font> Shooter Years Before Attack #RadicalIslam" ; 
-        document.getElementById("row1col2").innerHTML = "Orlando (LOC)" ;
-        document.getElementById("row2col1").innerHTML = "Gun control defeated in Senate. Again. <font color = 'red'>#Orlando</font> means nothing if you're paid by the <font color = 'blue'>NRA</font>." ; 
-        document.getElementById("row2col2").innerHTML = "#Orlando(LOC), NRA (ORG)" ; 
-        document.getElementById("row3col1").innerHTML = "RETWEET if you agree <font color = 'orange'>Obama</font> admin should release the full, unredacted transcript of the #Orlando shooter's 911 call" ; 
-        document.getElementById("row3col2").innerHTML = "Obama (PER)" ; 
-        document.getElementById("row4col1").innerHTML = "Guess who supported <font color = 'orange'>Hillary Clinton</font>? " ; 
-        document.getElementById("row4col2").innerHTML = "Hillary (PER), Clinton (PER)" ; 
-        document.getElementById("row5col1").innerHTML = "At vigil outside <font color = 'blue'>NRA</font> HQ protesters hold hearts with names of #Orlando <font color = 'red'>victims</font>." ; 
-        document.getElementById("row5col2").innerHTML = "NRA (ORG) " ; 
+        set_default();
     }
-    else if (test == '1'){
+    else if (selection == '1'){
         chart.setData(brexit);
         click_brexit();
         document.getElementById("row1col1").innerHTML = "RT @Ironwand: If you're happy with those who made this happen, vote to to #REMAIN in the <font color = 'blue'>EU</font>. If you are not " ; 
         document.getElementById("row1col2").innerHTML = "EU (ORG)" ;
+        document.getElementById("row1col3").innerHTML = "Positive" ;
         document.getElementById("row2col1").innerHTML = "I fear that #Brexit could be the beginning of the destruction of not only the <font color = 'blue'>EU</font>, but also of Western political civilisation: @eucopresident" ; 
         document.getElementById("row2col2").innerHTML = "EU (ORG)" ; 
-        document.getElementById("row3col1").innerHTML = "Freedomlies in being bold. " ; 
+        document.getElementById("row2col3").innerHTML = "Negative" ;
+        document.getElementById("row3col1").innerHTML = "Freedom lies in being bold. " ; 
         document.getElementById("row3col2").innerHTML = "" ; 
-        document.getElementById("row4col1").innerHTML = "RT @theordinaryman2: need to listen to @DanHannanMEP he's the smartest #Tory I know #EURef #VoteLeave #Brexit #remain #INorOUT #Labour" ; 
+        document.getElementById("row3col3").innerHTML = "Positive" ;
+        document.getElementById("row4col1").innerHTML = "RT @theordinaryman2: need to listen to @DanHannanMEP he's the smarselection #Tory I know #EURef #VoteLeave #Brexit #remain #INorOUT #Labour" ; 
         document.getElementById("row4col2").innerHTML = "" ; 
+        document.getElementById("row4col3").innerHTML = "Neutral" ;
         document.getElementById("row5col1").innerHTML = "RT @noticiassefarad: <font color = 'blue'>EU Commission</font> Seeks Support to Greatly Expand Immigration despite Record Unemployment" ; 
         document.getElementById("row5col2").innerHTML = "EU Commission (ORG)" ; 
+        document.getElementById("row5col3").innerHTML = "Neutral" ;
 
     }
-    else if (test == '2'){
+    else if (selection == '2'){
         chart.setData(fashion);
         click_fashion();
         document.getElementById("row1col1").innerHTML = "RT @jewellery_bank: Beautiful & distinctive Pendants 300 Designs" ; 
         document.getElementById("row1col2").innerHTML = "" ;
-        document.getElementById("row2col1").innerHTML = "<font color = 'orange'> Hailee Steinfeld</font> Shows Off Her Chic <font color = 'blue'> Airport </font> Style in <font colour = 'blue'> Toronto </font>http://dlvr.it/LcNlFL" ; 
+        document.getElementById("row1col3").innerHTML = "Positive" ;
+        document.getElementById("row2col1").innerHTML = "<font color = 'green'> Hailee Steinfeld</font> Shows Off Her Chic <font color = 'blue'> Airport </font> Style in <font colour = 'blue'> Toronto </font>http://dlvr.it/LcNlFL" ; 
         document.getElementById("row2col2").innerHTML = "Hailee (PER), Steinfeld (PER), Airport (LOC)";
-        document.getElementById("row3col1").innerHTML = "<font color = 'orange'>Carmen Vecchio</font> Talks To <font color = 'orange'>Durtti</font> About http://www.durtti.com/?p=406"; 
+        document.getElementById("row2col3").innerHTML = "Neutral" ;
+        document.getElementById("row3col1").innerHTML = "<font color = 'green'>Carmen Vecchio</font> Talks To <font color = 'green'>Durtti</font> About http://www.durtti.com/?p=406"; 
         document.getElementById("row3col2").innerHTML = "Carmen(PER), Vecchio(PER), Durtti(PER)";
+        document.getElementById("row3col3").innerHTML = "Neutral" ;
         document.getElementById("row4col1").innerHTML = "Nike men's 6.0 Skateboard Shoes Purple size 7 EUR 40" ; 
         document.getElementById("row4col2").innerHTML = "";
+        document.getElementById("row4col3").innerHTML = "Neutral" ;
         document.getElementById("row5col1").innerHTML = "Summer / winter looks #sketches #characterdesign #fashion" ; 
         document.getElementById("row5col2").innerHTML = "" ; 
+        document.getElementById("row5col3").innerHTML = "Neutral" ;
  
 
     }
-    else if (test == '3'){
+    else if (selection == '3'){
         chart.setData(iphone);
         click_iphone();
         document.getElementById("row1col1").innerHTML = "I have Cauldron on my island! Now my island is even more awesome! http://gigam.es/imtw_Tribez" ; 
         document.getElementById("row1col2").innerHTML = "" ;
+        document.getElementById("row1col3").innerHTML = "Positive" ;
         document.getElementById("row2col1").innerHTML = "<font color = 'red'>Japan</font> Collections 28. 高校生のためのOCW - <font color = 'red'>Kyoto</font> University http://tinyurl.com/m9vscuu" ; 
         document.getElementById("row2col2").innerHTML = "Japan (LOC), Kyoto (LOC)" ; 
+        document.getElementById("row2col3").innerHTML = "Neutral" ;
         document.getElementById("row3col1").innerHTML = "I have Warehouse on my island! Now my island is even more awesome! http://gigam.es/imtw_Tribez " ; 
         document.getElementById("row3col2").innerHTML = "" ; 
+        document.getElementById("row3col3").innerHTML = "Positive" ;
         document.getElementById("row4col1").innerHTML = "iPhone 7 Rumored to Ship With Standard 3.5mm EarPods and Lightning Adapter http://bit.ly/28K8tTR" ; 
         document.getElementById("row4col2").innerHTML = "" ; 
+        document.getElementById("row4col3").innerHTML = "Neutral" ;
         document.getElementById("row5col1").innerHTML = "I just gained 21 new followers using this awesome #iPhone #app" ; 
         document.getElementById("row5col2").innerHTML = "" ; 
+        document.getElementById("row5col3").innerHTML = "Positive" ;
 
     }
-    else if (test == '4'){
+    else if (selection == '4'){
         chart.setData(impulserewards);
         click_implusrewards
         document.getElementById("row1col1").innerHTML = "I'm earning #mPLUSRewards in The Weather Channel. http://getm.pt/g6u5ec" ; 
         document.getElementById("row1col2").innerHTML = "" ;
+        document.getElementById("row1col3").innerHTML = "Positive" ;
         document.getElementById("row2col1").innerHTML = "I'm earning #mPLUSRewards in Ask Da Ball Android. http://getm.pt/plqw8x" ; 
         document.getElementById("row2col2").innerHTML = "" ; 
+        document.getElementById("row2col3").innerHTML = "Positive" ;
         document.getElementById("row3col1").innerHTML = "I'm earning #mPLUSRewards in Shower Thoughts with mPoints. http://getm.pt/66icch" ; 
         document.getElementById("row3col2").innerHTML = "" ; 
+        document.getElementById("row3col3").innerHTML = "Positive" ;
         document.getElementById("row4col1").innerHTML = "I'm earning #mPLUSRewards in ScanLife. http://getm.pt/p0hg0v" ; 
         document.getElementById("row4col2").innerHTML = "" ; 
+        document.getElementById("row4col3").innerHTML = "Positive" ;
         document.getElementById("row5col1").innerHTML = "I'm earning #mPLUSRewards in Punchcard. http://getm.pt/smafbq @MyPunchcard" ; 
         document.getElementById("row5col2").innerHTML = "" ; 
+        document.getElementById("row5col3").innerHTML = "Positive" ;
 
 
     }
