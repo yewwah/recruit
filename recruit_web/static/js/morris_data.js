@@ -154,8 +154,33 @@ var impulserewards = [{
         uniqueTweets:62600,
         exposure:331
         }];
-
+var chart = Morris.Area({
+        element: 'morris-area-chart',
+        data: orlando,
+        xLabels: 'day',
+        xkey: 'period', //datetime 
+        ykeys : ['retweets', 'uniqueTweets', 'exposure'], //tweets
+        labels: ['Retweets', 'Unique Tweets', 'Hastag Exposure(00s)' ],
+        pointSize: 2,
+        hideHover: 'auto',
+        resize: true
+        });  
+function set_default(){
+    chart.setData(orlando);
+    click_orlando();
+    document.getElementById("row1col1").innerHTML = "This Gov't is KILLING us! FBI had Undercover Informant on Islamic<font color = 'red'>#Orlando</font> Shooter Years Before Attack #RadicalIslam" ; 
+    document.getElementById("row1col2").innerHTML = "Orlando (LOC)" ;
+    document.getElementById("row2col1").innerHTML = "Gun control defeated in Senate. Again. <font color = 'red'>#Orlando</font> means nothing if you're paid by the <font color = 'blue'>NRA</font>." ; 
+    document.getElementById("row2col2").innerHTML = "#Orlando(LOC), NRA (ORG)" ; 
+    document.getElementById("row3col1").innerHTML = "RETWEET if you agree <font color = 'orange'>Obama</font> admin should release the full, unredacted transcript of the #Orlando shooter's 911 call" ; 
+    document.getElementById("row3col2").innerHTML = "Obama (PER)" ; 
+    document.getElementById("row4col1").innerHTML = "Guess who supported <font color = 'orange'>Hillary Clinton</font>? " ; 
+    document.getElementById("row4col2").innerHTML = "Hillary (PER), Clinton (PER)" ; 
+    document.getElementById("row5col1").innerHTML = "At vigil outside <font color = 'blue'>NRA</font> HQ protesters hold hearts with names of #Orlando <font color = 'red'>victims</font>." ; 
+    document.getElementById("row5col2").innerHTML = "NRA (ORG) " ; 
+}
 function click_orlando(){
+
     document.getElementById('header').innerHTML = "Orlando Shooting";
     document.getElementById('box1_head1').innerHTML = "Brexit";
     document.getElementById('box1_head2').innerHTML = "@OrlandoPolice";
@@ -274,56 +299,47 @@ $('#tableId').find('tr').click( function(){
   var test = ($(this).index());
   $('#morris-area-chart').remove();
   $('#append').append('<div id =  "morris-area-chart" />');
-  var chart = Morris.Area({
-        element: 'morris-area-chart',
-        data: orlando,
-        xLabels: 'day',
-        xkey: 'period', //datetime 
-        ykeys : ['retweets', 'uniqueTweets', 'exposure'], //tweets
-        labels: ['Retweets', 'Unique Tweets', 'Hastag Exposure(00s)' ],
-        pointSize: 2,
-        hideHover: 'auto',
-        resize: true
-        });  
+  
 
 
   if (test == '0') {
         chart.setData(orlando);
-        document.getElementById("row1col1").innerHTML = "This Gov't is KILLING us! FBI had Undercover Informant on <font color = 'red'>Islamic</font> <font color = 'red'>#Orlando</font> Shooter Years Before Attack <font color = 'red'>#RadicalIslam</font>" ; 
-        document.getElementById("row1col2").innerHTML = "Gov't, FBI, Shooter, Attack" ;
-        document.getElementById("row2col1").innerHTML = "<font color = 'red'>Gun</font> control defeated in <font color = 'red'>Senate</font>. Again. #Orlando means nothing if you're paid by the <font color = 'red'>NRA</font>." ; 
-        document.getElementById("row2col2").innerHTML = "Gun, NRA" ; 
-        document.getElementById("row3col1").innerHTML = "<font color = 'red'>RETWEET</font> if you agree <font color = 'red'>Obama</font> admin should release the full, unredacted transcript of the #Orlando shooter's 911 call" ; 
-        document.getElementById("row3col2").innerHTML = "RETWEET, Obama" ; 
-        document.getElementById("row4col1").innerHTML = "Guess who supported <font color = 'red'>Hillary Clinton</font>? " ; 
-        document.getElementById("row4col2").innerHTML = "Hillary, Clinton" ; 
-        document.getElementById("row5col1").innerHTML = "At vigil outside <font color = 'red'>NRA</font> HQ protesters hold hearts with names of #Orlando <font color = 'red'>victims</font>." ; 
-        document.getElementById("row5col2").innerHTML = "NRA, victims" ; 
+        click_orlando();
+        document.getElementById("row1col1").innerHTML = "This Gov't is KILLING us! FBI had Undercover Informant on Islamic<font color = 'red'>#Orlando</font> Shooter Years Before Attack #RadicalIslam" ; 
+        document.getElementById("row1col2").innerHTML = "Orlando (LOC)" ;
+        document.getElementById("row2col1").innerHTML = "Gun control defeated in Senate. Again. <font color = 'red'>#Orlando</font> means nothing if you're paid by the <font color = 'blue'>NRA</font>." ; 
+        document.getElementById("row2col2").innerHTML = "#Orlando(LOC), NRA (ORG)" ; 
+        document.getElementById("row3col1").innerHTML = "RETWEET if you agree <font color = 'orange'>Obama</font> admin should release the full, unredacted transcript of the #Orlando shooter's 911 call" ; 
+        document.getElementById("row3col2").innerHTML = "Obama (PER)" ; 
+        document.getElementById("row4col1").innerHTML = "Guess who supported <font color = 'orange'>Hillary Clinton</font>? " ; 
+        document.getElementById("row4col2").innerHTML = "Hillary (PER), Clinton (PER)" ; 
+        document.getElementById("row5col1").innerHTML = "At vigil outside <font color = 'blue'>NRA</font> HQ protesters hold hearts with names of #Orlando <font color = 'red'>victims</font>." ; 
+        document.getElementById("row5col2").innerHTML = "NRA (ORG) " ; 
     }
     else if (test == '1'){
         chart.setData(brexit);
         click_brexit();
-        document.getElementById("row1col1").innerHTML = "RT @Ironwand: If you're happy with those who made this happen, vote to to <font color = 'red'>#REMAIN</font> in the <font color = 'red'>EU</font>. If you are not " ; 
-        document.getElementById("row1col2").innerHTML = "#REMAIN, EU" ;
-        document.getElementById("row2col1").innerHTML = "I fear that #Brexit could be the beginning of the destruction of not only the <font color = 'red'>EU</font>, but also of <font color = 'red'>Western</font> political civilisation: @eucopresident" ; 
-        document.getElementById("row2col2").innerHTML = "EU, Western" ; 
-        document.getElementById("row3col1").innerHTML = "<font color = 'red'>Freedom</font> lies in being bold. " ; 
-        document.getElementById("row3col2").innerHTML = "Freedom" ; 
+        document.getElementById("row1col1").innerHTML = "RT @Ironwand: If you're happy with those who made this happen, vote to to #REMAIN in the <font color = 'blue'>EU</font>. If you are not " ; 
+        document.getElementById("row1col2").innerHTML = "EU (ORG)" ;
+        document.getElementById("row2col1").innerHTML = "I fear that #Brexit could be the beginning of the destruction of not only the <font color = 'blue'>EU</font>, but also of Western political civilisation: @eucopresident" ; 
+        document.getElementById("row2col2").innerHTML = "EU (ORG)" ; 
+        document.getElementById("row3col1").innerHTML = "Freedomlies in being bold. " ; 
+        document.getElementById("row3col2").innerHTML = "" ; 
         document.getElementById("row4col1").innerHTML = "RT @theordinaryman2: need to listen to @DanHannanMEP he's the smartest #Tory I know #EURef #VoteLeave #Brexit #remain #INorOUT #Labour" ; 
         document.getElementById("row4col2").innerHTML = "" ; 
-        document.getElementById("row5col1").innerHTML = "RT @noticiassefarad: <font color = 'red'>EU Commission</font> Seeks Support to Greatly Expand Immigration despite Record <font color = 'red'>Unemployment</font>" ; 
-        document.getElementById("row5col2").innerHTML = "EU, Commission, Unemployment" ; 
+        document.getElementById("row5col1").innerHTML = "RT @noticiassefarad: <font color = 'blue'>EU Commission</font> Seeks Support to Greatly Expand Immigration despite Record Unemployment" ; 
+        document.getElementById("row5col2").innerHTML = "EU Commission (ORG)" ; 
 
     }
     else if (test == '2'){
         chart.setData(fashion);
         click_fashion();
-        document.getElementById("row1col1").innerHTML = "RT @jewellery_bank: <font color = 'red'>Beautiful</font> & distinctive Pendants 300 Designs" ; 
-        document.getElementById("row1col2").innerHTML = "Beautiful" ;
-        document.getElementById("row2col1").innerHTML = "Hailee Steinfeld Shows Off Her Chic Airport Style in Toronto http://dlvr.it/LcNlFL" ; 
-        document.getElementById("row2col2").innerHTML = "";
-        document.getElementById("row3col1").innerHTML = "Carmen Vecchio Talks To Durtti About http://www.durtti.com/?p=406"; 
-        document.getElementById("row3col2").innerHTML = "";
+        document.getElementById("row1col1").innerHTML = "RT @jewellery_bank: Beautiful & distinctive Pendants 300 Designs" ; 
+        document.getElementById("row1col2").innerHTML = "" ;
+        document.getElementById("row2col1").innerHTML = "<font color = 'orange'> Hailee Steinfeld</font> Shows Off Her Chic <font color = 'blue'> Airport </font> Style in <font colour = 'blue'> Toronto </font>http://dlvr.it/LcNlFL" ; 
+        document.getElementById("row2col2").innerHTML = "Hailee (PER), Steinfeld (PER), Airport (LOC)";
+        document.getElementById("row3col1").innerHTML = "<font color = 'orange'>Carmen Vecchio</font> Talks To <font color = 'orange'>Durtti</font> About http://www.durtti.com/?p=406"; 
+        document.getElementById("row3col2").innerHTML = "Carmen(PER), Vecchio(PER), Durtti(PER)";
         document.getElementById("row4col1").innerHTML = "Nike men's 6.0 Skateboard Shoes Purple size 7 EUR 40" ; 
         document.getElementById("row4col2").innerHTML = "";
         document.getElementById("row5col1").innerHTML = "Summer / winter looks #sketches #characterdesign #fashion" ; 
@@ -334,14 +350,14 @@ $('#tableId').find('tr').click( function(){
     else if (test == '3'){
         chart.setData(iphone);
         click_iphone();
-        document.getElementById("row1col1").innerHTML = "I have <font color = 'red'>Cauldron</font> on my island! Now my island is even more awesome! http://gigam.es/imtw_Tribez" ; 
-        document.getElementById("row1col2").innerHTML = "Cauldron" ;
+        document.getElementById("row1col1").innerHTML = "I have Cauldron on my island! Now my island is even more awesome! http://gigam.es/imtw_Tribez" ; 
+        document.getElementById("row1col2").innerHTML = "" ;
         document.getElementById("row2col1").innerHTML = "<font color = 'red'>Japan</font> Collections 28. 高校生のためのOCW - <font color = 'red'>Kyoto</font> University http://tinyurl.com/m9vscuu" ; 
-        document.getElementById("row2col2").innerHTML = "Japan, Kyoto" ; 
-        document.getElementById("row3col1").innerHTML = "I have <font color = 'red'>Warehouse</font> on my <font color = 'red'>island</font>! Now my island is even more awesome! http://gigam.es/imtw_Tribez " ; 
-        document.getElementById("row3col2").innerHTML = "Warehouse, island" ; 
-        document.getElementById("row4col1").innerHTML = "<font color = 'red'>iPhone</font> 7 Rumored to Ship With Standard 3.5mm EarPods and <font color = 'red'>Lightning</font> Adapter http://bit.ly/28K8tTR" ; 
-        document.getElementById("row4col2").innerHTML = "iPhone, Lightning" ; 
+        document.getElementById("row2col2").innerHTML = "Japan (LOC), Kyoto (LOC)" ; 
+        document.getElementById("row3col1").innerHTML = "I have Warehouse on my island! Now my island is even more awesome! http://gigam.es/imtw_Tribez " ; 
+        document.getElementById("row3col2").innerHTML = "" ; 
+        document.getElementById("row4col1").innerHTML = "iPhone 7 Rumored to Ship With Standard 3.5mm EarPods and Lightning Adapter http://bit.ly/28K8tTR" ; 
+        document.getElementById("row4col2").innerHTML = "" ; 
         document.getElementById("row5col1").innerHTML = "I just gained 21 new followers using this awesome #iPhone #app" ; 
         document.getElementById("row5col2").innerHTML = "" ; 
 
@@ -362,4 +378,7 @@ $('#tableId').find('tr').click( function(){
 
 
     }
+});
+$(document).ready(function(){
+set_default();
 });
