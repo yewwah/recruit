@@ -183,6 +183,7 @@ function set_default(){
     document.getElementById("row5col1").innerHTML = "At vigil outside <font color = 'blue'>NRA</font> HQ proselectioners hold hearts with names of #Orlando <font color = 'red'>victims</font>." ; 
     document.getElementById("row5col2").innerHTML = "NRA (ORG) " ; 
     document.getElementById("row5col3").innerHTML = "Negative" ;
+    document.getElementById("row6col1").innerHTML = "Negative" ;
 }
 function click_orlando(){
 
@@ -330,7 +331,7 @@ $('#tableId').find('tr').click( function(){
         document.getElementById("row5col1").innerHTML = "RT @noticiassefarad: <font color = 'blue'>EU Commission</font> Seeks Support to Greatly Expand Immigration despite Record Unemployment" ; 
         document.getElementById("row5col2").innerHTML = "EU Commission (ORG)" ; 
         document.getElementById("row5col3").innerHTML = "Neutral" ;
-
+        document.getElementById("row6col1").innerHTML = "Neutral" ;
     }
     else if (selection == '2'){
         chart.setData(fashion);
@@ -350,7 +351,7 @@ $('#tableId').find('tr').click( function(){
         document.getElementById("row5col1").innerHTML = "Summer / winter looks #sketches #characterdesign #fashion" ; 
         document.getElementById("row5col2").innerHTML = "" ; 
         document.getElementById("row5col3").innerHTML = "Neutral" ;
- 
+        document.getElementById("row6col1").innerHTML = "Neutral" ;
 
     }
     else if (selection == '3'){
@@ -371,6 +372,7 @@ $('#tableId').find('tr').click( function(){
         document.getElementById("row5col1").innerHTML = "I just gained 21 new followers using this awesome #iPhone #app" ; 
         document.getElementById("row5col2").innerHTML = "" ; 
         document.getElementById("row5col3").innerHTML = "Positive" ;
+        document.getElementById("row6col1").innerHTML = "Neutral" ;
 
     }
     else if (selection == '4'){
@@ -391,6 +393,7 @@ $('#tableId').find('tr').click( function(){
         document.getElementById("row5col1").innerHTML = "I'm earning #mPLUSRewards in Punchcard. http://getm.pt/smafbq @MyPunchcard" ; 
         document.getElementById("row5col2").innerHTML = "" ; 
         document.getElementById("row5col3").innerHTML = "Positive" ;
+        document.getElementById("row6col1").innerHTML = "Positive" ;
 
 
     }
